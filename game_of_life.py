@@ -363,7 +363,7 @@ if __name__ == '__main__':
         cellsfile = sys.argv[1]
         grid = load_grid(cellsfile)
     except IndexError:
-        files = os.listdir('cells')
+        files = [f for f in os.listdir('cells') if f not in ('.gitignore')]
         cellsfile = os.path.join('cells', files[random.randint(0, len(files))])
         grid = load_grid(cellsfile)
         raw_input('Randomly selected to play pattern %r\nPress enter to start' % (grid.name,))
