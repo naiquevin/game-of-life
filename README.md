@@ -8,6 +8,7 @@ This is an implementation of the famous
 [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life)
 in Python. It's a result of Sunday afternoon boredom.
 
+
 How to run?
 -----------
 
@@ -32,6 +33,13 @@ the command,
 ```bash
     $ python game_of_life.py cells/101.cells
 ```
+
+
+Demo
+----
+
+![Pulshuttle_V](../blob/master/pulshuttle_V.gif?raw=true)
+
 
 Coming Soon!
 ------------
