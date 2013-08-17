@@ -38,7 +38,7 @@ the command,
 Demo
 ----
 
-![Pulshuttle_V](../blob/master/pulshuttle_V.gif?raw=true)
+![Pulshuttle_V](../master/pulshuttle_V.gif?raw=true)
 
 
 Coming Soon!
