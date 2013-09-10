@@ -8,19 +8,6 @@ This is an implementation of the famous
 [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life)
 in Python. It's a result of Sunday afternoon boredom.
 
-
-Installation
-------------
-
-There is no installation required, at least to run the primary version
-of the game (written in Python). However, you will need to download
-all Game of Life seed patterns. To do so just execute the
-``lifeconfigs.sh`` script and it will download everything.
-
-```bash
-    $ sh lifeconfigs.sh
-```
-
 How to run?
 -----------
 
@@ -32,7 +19,8 @@ running the ``lifeconfigs.sh`` script,
     $ ./lifeconfigs.sh
 ```
 
-This will take a while. Once it's done, run the ``game_of_life.py`` script,
+This will take a while. Once it's done, run the ``game_of_life.py``
+script,
 
 ```bash
     $ python game_of_life.py
@@ -46,11 +34,12 @@ the command,
     $ python game_of_life.py cells/101.cells
 ```
 
+Note that ``lifeconfigs.sh`` needs to be executed only once.
+
 Demo
 ----
 
 ![Pulshuttle_V](../master/pulshuttle_V.gif?raw=true)
-
 
 Languages
 ---------
