@@ -9,6 +9,18 @@ This is an implementation of the famous
 in Python. It's a result of Sunday afternoon boredom.
 
 
+Installation
+------------
+
+There is no installation required, at least to run the primary version
+of the game (written in Python). However, you will need to download
+all Game of Life seed patterns. To do so just execute the
+``lifeconfigs.sh`` script and it will download everything.
+
+```bash
+    $ sh lifeconfigs.sh
+```
+
 How to run?
 -----------
 
@@ -34,20 +46,20 @@ the command,
     $ python game_of_life.py cells/101.cells
 ```
 
-
 Demo
 ----
 
 ![Pulshuttle_V](../master/pulshuttle_V.gif?raw=true)
 
 
-Coming Soon!
-------------
+Languages
+---------
 
-Implementions in other languages (whenever I am bored again!)
+Currently the game is implemented in,
 
-Currently implemented in,
+* Python  (see game_of_life.py)  ✔
+* Clojure (see gol_clj)          ✔
 
-* Python  ✔
-* Clojure ✔
+Implementions in other languages coming soon (whenever I am bored
+again!)
 
