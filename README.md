@@ -44,5 +44,10 @@ Demo
 Coming Soon!
 ------------
 
-* Implementions in other languages (whenever I am bored again!)
+Implementions in other languages (whenever I am bored again!)
+
+Currently implemented in,
+
+* Python  ✔
+* Clojure ✔
 
