@@ -50,7 +50,7 @@
 
 (deftest pad-cells-test
   (testing "pad-cells function"
-    (let [padded (pad-cells C1)
+    (let [padded (pad-cells C1 2)
           padded-row (vec (concat [:dead :dead] (first C1) [:dead :dead]))]
       (is (= (num-cols padded) (+ (* 2 2) (num-cols C1))))
       (is (= (num-rows padded) (+ (* 2 2) (num-rows C1))))

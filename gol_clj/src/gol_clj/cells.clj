@@ -49,12 +49,18 @@
 
 (defn pad-cells
   "Pads the grid with two blank rows and columns on either sides"
-  [cells]
+  [cells padding]
   (letfn [(pad-cols [cells]
-            (mapv (fn [row] (vec (concat [:dead :dead] row [:dead :dead]))) cells))
+            (mapv (fn [row]
+                    (vec (concat (repeat padding :dead)
+                                 row
+                                 (repeat padding :dead))))
+                  cells))
           (pad-rows [cells]
             (let [blank-row (vec (repeat (num-cols cells) :dead))]
-              (vec (concat [blank-row blank-row] cells [blank-row blank-row]))))]
+              (vec (concat (repeat padding blank-row)
+                           cells
+                           (repeat padding blank-row)))))]
     (pad-rows (pad-cols cells))))
 
 
@@ -63,7 +69,7 @@
   [file-name]
   (let [lines (get-lines file-name)]
     {:name (get-name lines)
-     :cells (get-cells lines)}))
+     :cells (pad-cells (get-cells lines) 1)}))
 
 
 (defn surr-cell-idxs
