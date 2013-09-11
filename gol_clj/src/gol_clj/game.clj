@@ -3,6 +3,7 @@
 
 
 (defn world
+  "Lives on forever"
   [state fun printer ms]
   (printer state)
   (Thread/sleep ms)
@@ -10,6 +11,7 @@
 
 
 (defn destiny
+  "Produces next state of a cell"
   [pos status cells]
   (let [n (cells/count-neighbours pos cells)]
     (if (= status :alive)
@@ -18,6 +20,7 @@
 
 
 (defn evolve
+  "Evolution of the cells together"
   [state]
   (let [idx-state (cells/indexed-cells state)]
     (mapv (fn [v]
@@ -28,7 +31,7 @@
 
 
 (defn start
-  "State the world!"
+  "Big Bang!"
   [init printer ms]
   (world init evolve printer ms))
 
