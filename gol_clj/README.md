@@ -13,7 +13,7 @@ for running the game.
 Usage
 -----
 
-Run following command from this directory
+Run following command from the current directory
 
 ```bash
     $ lein run FILENAME
@@ -35,15 +35,14 @@ Running tests
 Note
 ----
 
-I know may not be idiomatic Clojure as I am still learning the
+I know this may not be idiomatic Clojure as I am still learning the
 language. It's just an attempt to port something I had already written
-in a more familiar language (Python), something like a warm up! But I
-am open to any kind of suggestions/criticism. So please let me know if
-there is anything.
+in a more familiar language (Python). But I am open to any kind of
+suggestions. So please let me know if you have any thoughts on this.
 
 License
 -------
 
-Copyright © 2013 Vineet Naik
+Copyright © 2013, Vineet Naik
 
 Distributed under the Eclipse Public License, the same as Clojure.

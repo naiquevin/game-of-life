@@ -6,21 +6,21 @@ What and Why?
 
 This is an implementation of the famous
 [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life)
-in Python. It's a result of Sunday afternoon boredom.
+in Python (Update: and Clojure). It's a result of Sunday afternoon boredom.
 
 How to run?
 -----------
 
 First download ``.cells`` files from this
 [game of life lexicon](http://www.bitstorm.org/gameoflife/lexicon/) by
-running the ``lifeconfigs.sh`` script,
+running the ``lifeconfigs.sh`` script. This needs to be done only once.
 
 ```bash
     $ ./lifeconfigs.sh
 ```
 
-This will take a while. Once it's done, run the ``game_of_life.py``
-script,
+It will take a while since there are many files to be downloaded. Once
+it's done, run the ``game_of_life.py`` script,
 
 ```bash
     $ python game_of_life.py
@@ -33,8 +33,6 @@ the command,
 ```bash
     $ python game_of_life.py cells/101.cells
 ```
-
-Note that ``lifeconfigs.sh`` needs to be executed only once.
 
 Demo
 ----
