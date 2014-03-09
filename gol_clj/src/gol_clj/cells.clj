@@ -5,9 +5,10 @@
 
 
 (defn get-lines
-  "Reads lines from a file with name `file-name`"
-  [file-name]
-  (line-seq (io/reader file-name)))
+  "Reads lines from a file where the arg `file` is either a
+  name (string) or a java.io.File object"
+  [file]
+  (line-seq (io/reader file)))
 
 
 (defn get-name

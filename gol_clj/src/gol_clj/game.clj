@@ -4,10 +4,10 @@
 
 (defn world
   "Lives on forever"
-  [state fun printer ms]
-  (printer state)
+  [state fun display ms]
+  (display state)
   (Thread/sleep ms)
-  (world (fun state) fun printer ms))
+  (world (fun state) fun display ms))
 
 
 (defn destiny
@@ -32,6 +32,6 @@
 
 (defn start
   "Big Bang!"
-  [init printer ms]
-  (world init evolve printer ms))
+  [init display ms]
+  (world init evolve display ms))
 
