@@ -17,7 +17,6 @@
     (->> [erase-line cursor-up]
          (repeat n)
          (mapcat identity)
-         (cons cursor-up)
          (apply str))))
 
 
@@ -32,9 +31,22 @@
 
 
 (defn display
-  "Prints state after clearing the existing output"
+  "Prints state after clearing the existing output.
+
+  This function returns itself in the end and the return value will be
+  used to display the next state
+  "
   [state]
-  (println (str (clear-str state) (render state))))
+  (println (str (clear-str state) (render state)))
+  display)
+
+
+(defn display*
+  "Alternate version of `display` that doesn't clear already printed
+  lines. This function will be used for displaying the initial state."
+  [state]
+  (println (render state))
+  display)
 
 
 (defn random-file
@@ -46,6 +58,8 @@
 
 
 (defn handle-arg
+  "Handles the command line argument depending upon whether it's a
+  path to a .cells file or a directory"
   [arg]
   (let [file-obj (io/file arg)]
     (cond (.isDirectory file-obj)
@@ -67,4 +81,4 @@
   ;; work around dangerous default behaviour in Clojure
   (alter-var-root #'*read-eval* (constantly false))
   (let [grid (cells/grid (handle-arg arg))]
-    (game/start (:cells grid) display 200)))
+    (game/start (:cells grid) display* 200)))

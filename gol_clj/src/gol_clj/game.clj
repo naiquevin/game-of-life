@@ -5,9 +5,9 @@
 (defn world
   "Lives on forever"
   [state fun display ms]
-  (display state)
-  (Thread/sleep ms)
-  (world (fun state) fun display ms))
+  (let [display (display state)]
+   (Thread/sleep ms)
+   (world (fun state) fun display ms)))
 
 
 (defn destiny
@@ -34,4 +34,3 @@
   "Big Bang!"
   [init display ms]
   (world init evolve display ms))
-
